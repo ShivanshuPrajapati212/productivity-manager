@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { LuListTodo } from "react-icons/lu";    
 
 const NavBar = () => {
   let date = new Date();
@@ -18,9 +19,9 @@ const NavBar = () => {
 
   return (
     <div className="text-3xl text-white shadow-lg border-gray-400 rounded-xl p-5 bg-zinc-800 flex justify-between">
-      <div className="left">Hi, Shivanshu</div>
-      <div className="center">{`${time.hours}:${time.mins}:${time.secs}`}</div>
-      <div className="right">Icon</div>
+      <div className="left max-md:hidden hover:text-zinc-400 transition ease-in-out">Hi, Shivanshu</div>
+      <div className="center hover:text-zinc-400 transition ease-in-out">{`${time.hours}:${time.mins}:${time.secs}`}</div>
+      <div className="right flex items-center justify-center cursor-pointer hover:text-zinc-400 transition ease-in-out"><LuListTodo/></div>
     </div>
   );
 };
